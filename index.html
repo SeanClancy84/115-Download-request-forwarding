@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="提交下载链接">
+    <title>提交下载链接</title>
+</head>
+<body>
+	<p>1.请尽量合并多个链接下载，减少触发验证码概率</p>
+    <p>2.提交任务后，请<b>点击返回/后退按钮，不要点刷新!</b>刷新会导致重复提交!</p>
+    <p>3.提示验证账号/查询下载进度/下载失败/遇到其他问题，请联系管理员</p>
+    <form method="post">
+        <label for="text-input">下载链接:</label>
+		<textarea id="magnetLink" name="magnetLink" rows="5" cols="70"  placeholder="支持HTTP/HTTPS/FTP/磁力magnet/电驴ed2k，换行可添加多个"></textarea><br><br>
+        <label for="select-input">保存目录:</label>
+        <select id="pathId" name="pathId">
+			<option value="" disabled selected>请选择保存目录</option>
+            <option value="12345678">user1</option>
+            <option value="11111111">user2</option>
+            <option value="22222222">user3</option>
+        </select><br><br>
+        <label for="text-input">保存目录的用户密码:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">提交下载请求</button>
+    </form>
+</body>
+</html>
