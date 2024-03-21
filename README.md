@@ -9,8 +9,8 @@
 
 ## 环境依赖
 - NodeJS 环境 [https://nodejs.org/en/download](https://nodejs.org/en/download)
-- npm包 express (npm install express)
-- npm包 node-fetch (npm install node-fetch)
+- npm包 **express** (npm install express)
+- npm包 **node-fetch** (npm install node-fetch)
 - 115的用户Cookie (形如 **CID=123;SEID=456;UID=789** 抓包获得,建议抓取app的cookie,有效期更长.  
 iOS可以使用Stream:下载后安装证书，点击开始抓包，切换到115点开任意视频文件，出现视频画面即可返回Stream,查看115.com的包内容,找到CID UID SEID)
 
