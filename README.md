@@ -42,15 +42,20 @@ user1/22222222/password1
 'Cookie': 'CID=123;SEID=456;UID=789',
 ```
 CID，SEID，UID改为自己抓取的cookie
-### 修改run.sh
+### 修改run.sh & stop.sh
 ```shell
 nohup node /opt/listenRequest/server.js > /opt/listenRequest/log.log 2>&1 &
 ```
 /opt/listenRequest/server.js 改为**真实的绝对路径**  
 /opt/listenRequest/log.log 改为**日志文件的绝对路径**
-### 运行
+```shell
+pid=$(ps -ef | grep 'node /opt/listenMagnet/server.js' | grep -v grep | awk 'NR==1{print $2}')
+```
+/opt/listenRequest/server.js 改为**真实的绝对路径**  
+### 运行&停止
 ```bash
-./run.sh
+./run.sh  #运行
+./stop.sh  #停止
 ```
 ### 测试访问
 浏览器访问，http://localhost:3000 或 http://公网IP:3000 服务器默认运行在3000端口，使用http协议  
