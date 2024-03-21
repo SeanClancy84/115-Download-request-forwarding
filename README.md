@@ -25,7 +25,7 @@ cd 115downloadRequest  #进入文件夹后再安装npm包，否则npm包会装�
 npm install express
 npm install node-fetch
 ```
-并下载 server.js/index.html/user.txt/run.sh到115downloadRequest  
+并下载全部文件，保存到115downloadRequest  
 ### 修改user.txt
 ```
 user1/22222222/password1
