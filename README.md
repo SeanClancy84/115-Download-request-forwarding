@@ -49,7 +49,7 @@ nohup node /opt/listenRequest/server.js > /opt/listenRequest/log.log 2>&1 &
 /opt/listenRequest/server.js 改为**真实的绝对路径**  
 /opt/listenRequest/log.log 改为**日志文件的绝对路径**
 ```shell
-pid=$(ps -ef | grep 'node /opt/listenMagnet/server.js' | grep -v grep | awk 'NR==1{print $2}')
+pid=$(ps -ef | grep 'node /opt/listenRequest/server.js' | grep -v grep | awk 'NR==1{print $2}')
 ```
 /opt/listenRequest/server.js 改为**真实的绝对路径**  
 ### 运行&停止
