@@ -1,5 +1,5 @@
 # 115下载请求转发
-[English](https://github.com/SeanClancy84/115downloadRequest/blob/main/rednme-EN.md) | [中文](https://github.com/SeanClancy84/115downloadRequest/blob/main/rednme.md)  
+[English](https://github.com/SeanClancy84/115downloadRequest/blob/main/readnme-EN.md) | [中文](https://github.com/SeanClancy84/115downloadRequest/blob/main/README.md)  
 
 项目可以部署在Linux服务器上  
 替代用户向115发起离线下载的请求，支持指定目录，支持为目录添加密码  
