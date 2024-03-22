@@ -38,8 +38,14 @@ user1/22222222/password1
 ### 修改server.js
 ```javascript
 'Cookie': 'CID=123;SEID=456;UID=789',
+
+...
+
+key: fs.readFileSync('/path/to/your/key.key'),
+cert: fs.readFileSync('/path/to/your/cret.crt'),
 ```
-CID，SEID，UID改为自己抓取的cookie
+CID，SEID，UID改为自己抓取的cookie  
+key,cert改为有效的ssl证书  
 ### 修改run.sh & stop.sh
 ```shell
 nohup node /opt/listenRequest/server.js > /opt/listenRequest/log.log 2>&1 &
@@ -56,10 +62,10 @@ pid=$(ps -ef | grep 'node /opt/listenRequest/server.js' | grep -v grep | awk 'NR
 ./stop.sh  #停止
 ```
 ### 测试访问
-浏览器访问，http://localhost:3000 或 http://公网IP:3000 服务器默认运行在3000端口，使用http协议  
+浏览器访问，https://localhost:3000 或 https://公网IP:3000 服务器默认运行在3000端口，使用https协议  
 修改端口在server.js,把默认的3000修改即可
 ```javascript
 server.listen(3000, () => {
-    console.log(new Date().toString() + ':服务器启动,开始监听HTTP端口3000');
+    console.log(new Date().toString() + ':服务器启动,开始监听HTTPS端口3000');
 });
 ```
