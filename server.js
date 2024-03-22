@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('https');
 const fs = require('fs');
 
 const ipAttempts = {};  //记录登陆失败的ip
@@ -6,11 +6,16 @@ const lockDuration = 60 * 60 * 1000; //锁定1小时，1000毫秒*60*60
 const maxAttempts = 5;  //最大尝试次数5次
 let users = [];
 
+// 读取 SSL 证书和密钥
+const options = {
+  key: fs.readFileSync('/path/to/your/key.key'),
+  cert: fs.readFileSync('/path/to/your/cret.crt'),
+};
+
 // 读取用户信息文件，并保存到全局变量中
 fs.readFile('user.txt', 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading user file:', err);
-        // 可以考虑记录日志或者其他错误处理
         return;
     }
     users = data.trim().split('\r\n').map(line => {
@@ -58,7 +63,7 @@ function lockIp(ip) {
     ipAttempts[ip].lockedUntil = Date.now() + lockDuration;
 }
 
-const server = http.createServer((req, res) => {
+const server = https.createServer(options,(req, res) => {
     if (req.method === 'GET' && req.url === '/') {
         // 返回包含输入文本框和选择框的HTML表单
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
@@ -174,5 +179,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log(new Date().toString() + ':服务器启动,开始监听HTTP端口3000');
+    console.log(new Date().toString() + ':服务器启动,开始监听HTTPS端口3000');
 });
