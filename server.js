@@ -24,6 +24,17 @@ fs.readFile('user.txt', 'utf8', (err, data) => {
     });
 });
 
+let cookies = '';
+// 读取 cookie.txt 文件，获取 Cookie 值
+fs.readFile('cookie.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading cookie file:', err);
+        // 可以考虑记录日志或者其他错误处理
+        return;
+    }
+    cookies = data.trim();
+});
+
 //记录登陆失败的ip
 function recordFailedAttempt(ip) {
     if (!ipAttempts[ip]) {
@@ -148,7 +159,7 @@ const server = https.createServer(options,(req, res) => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'Cookie': 'CID=123;SEID=456;UID=789',
+                    'Cookie': cookies,
                 },
                 body: params.toString(),
             };
