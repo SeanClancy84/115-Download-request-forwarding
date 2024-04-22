@@ -35,14 +35,12 @@ user1/22222222/password1
 <option value="22222222">user1</option>
 ```
 为每个用户添加选择框，**vaule改为相应的用户目录id，user1改为用户名**
-### 修改server.js
+### 修改server.js  cookie.txt
 ```javascript
-'Cookie': 'CID=123;SEID=456;UID=789',
-
-...
-
 key: fs.readFileSync('/path/to/your/key.key'),
 cert: fs.readFileSync('/path/to/your/cret.crt'),
+
+CID=123;SEID=456;UID=789
 ```
 CID，SEID，UID改为自己抓取的cookie  
 key,cert改为有效的ssl证书  
