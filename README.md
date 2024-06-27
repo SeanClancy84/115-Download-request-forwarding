@@ -44,6 +44,7 @@ CID=123;SEID=456;UID=789
 ```
 CID，SEID，UID改为自己抓取的cookie  
 key,cert改为有效的ssl证书  
+SSL证书可以在这里申请 https://www.sslforfree.com/  
 ### 修改run.sh & stop.sh
 ```shell
 nohup node /opt/listenRequest/server.js > /opt/listenRequest/log.log 2>&1 &
