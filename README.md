@@ -49,7 +49,8 @@ key,cert改为有效的ssl证书
 nohup node /opt/listenRequest/server.js > /opt/listenRequest/log.log 2>&1 &
 ```
 /opt/listenRequest/server.js 改为**真实的绝对路径**  
-/opt/listenRequest/log.log 改为**日志文件的绝对路径**
+/opt/listenRequest/log.log 改为**日志文件的绝对路径**  
+如果不需要日志，可以把日志路径改为 /dev/null ，会抛弃所有写入的数据
 ```shell
 pid=$(ps -ef | grep 'node /opt/listenRequest/server.js' | grep -v grep | awk 'NR==1{print $2}')
 ```
