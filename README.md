@@ -4,7 +4,7 @@
 项目可以部署在Linux服务器上  
 替代用户向115发起离线下载的请求，支持指定目录，支持为目录添加密码  
 **建议配合[Alist](https://alist.nn.ci/zh/)项目使用**，实现用户隔离访问的同时，为每个用户提供离线下载的功能  
-(**2024.9.10更新：alist官方已经集成115离线下载的功能（版本>=v3.37.1）** https://github.com/alist-org/alist/releases/tag/v3.37.1)  
+(**2024.9.10更新：alist官方已经集成115离线下载的功能（版本>=v3.37.1）** https://github.com/alist-org/alist/releases)  
 项目已经实现：
 - 提供输入合法性校验
 - 密码尝试次数过多锁定用户ip
