@@ -12,7 +12,7 @@
 
 ## 环境依赖
 - NodeJS 环境 [https://nodejs.org/en/download](https://nodejs.org/en/download)  
-- npm包 **node-fetch** (npm install node-fetch)
+- npm包 **node-fetch** (npm i node-fetch)
 - 115的用户Cookie (形如 **CID=123;SEID=456;UID=789** 抓包获得,建议抓取app的cookie,有效期更长.  
 iOS可以使用Stream:下载后安装证书，点击开始抓包，切换到115点开任意视频文件，出现视频画面即可返回Stream,查看115.com的包内容,找到CID UID SEID)
 
@@ -22,7 +22,7 @@ iOS可以使用Stream:下载后安装证书，点击开始抓包，切换到115�
 yum install nodejs
 mkdir 115downloadRequest
 cd 115downloadRequest  #进入文件夹后再安装npm包，否则npm包会装在外层目录
-npm install node-fetch
+npm i node-fetch
 ```
 并下载全部文件，保存到115downloadRequest  
 ### 修改user.txt
