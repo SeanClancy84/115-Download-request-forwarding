@@ -41,9 +41,9 @@ user1/22222222/password1
 key: fs.readFileSync('/path/to/your/key.key'),
 cert: fs.readFileSync('/path/to/your/cret.crt'),
 
-CID=123;SEID=456;UID=789
+CID=123;SEID=456;UID=789;KID=012
 ```
-CID，SEID，UID改为自己抓取的cookie  
+CID，SEID，UID，KID 改为自己抓取的cookie  
 key,cert改为有效的ssl证书  
 SSL证书可以在这里申请 https://www.sslforfree.com/  
 ### 修改run.sh & stop.sh
